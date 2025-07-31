@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+
+
+
+
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav?.classList.add('shadow-xl', 'backdrop-blur-sm', 'bg-white/80');
+    } else {
+      nav?.classList.remove('shadow-xl', 'backdrop-blur-sm', 'bg-white/80');
+    }
+  }
 }

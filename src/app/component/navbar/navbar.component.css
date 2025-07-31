@@ -1,0 +1,88 @@
+@keyframes neonGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  }
+}
+
+@keyframes neonBorder {
+  0% {
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+  50% {
+    border-color: #f0f;
+    box-shadow: 0 0 20px #f0f;
+  }
+  100% {
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #0ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+}
+
+nav {
+  border-bottom: 2px solid #0ff;
+  animation: neonBorder 2s infinite;
+  background-color: rgba(0, 20, 30, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  animation: textGlow 1.5s infinite;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #0ff;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 5px #0ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.tech-btn {
+  background: transparent;
+  color: #0ff;
+  border: 2px solid #0ff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.tech-btn:hover {
+  animation: neonGlow 1.5s infinite;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.logo {
+  animation: textGlow 3s infinite;
+}
+
+.logo span {
+  color: #0ff !important;
+}
