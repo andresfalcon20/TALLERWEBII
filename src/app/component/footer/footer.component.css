@@ -1,0 +1,79 @@
+.footer-glow {
+  background-color: rgba(0, 20, 30, 0.9);
+  border-top: 2px solid #0ff;
+  animation: neonBorder 2s infinite;
+  backdrop-filter: blur(10px);
+}
+
+.footer-title {
+  animation: textGlow 3s infinite;
+}
+
+.footer-text {
+  animation: textGlow 3s infinite;
+}
+
+.footer-link {
+  color: #0ff;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  animation: textGlow 1.5s infinite;
+  color: #fff;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #0ff;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 5px #0ff;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.footer-icon {
+  color: #0ff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+  animation: neonGlow 1.5s infinite;
+  color: #fff;
+}
+
+
+@keyframes neonGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  }
+}
+
+@keyframes neonBorder {
+  0% {
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+  50% {
+    border-color: #f0f;
+    box-shadow: 0 0 20px #f0f;
+  }
+  100% {
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+}
+

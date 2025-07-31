@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="card" *ngFor="let item of cards">
+    <img [src]="item.imagen" alt="" />
+    <h2>{{ item.titulo }}</h2>
+    <p>{{ item.descripcion }}</p>
+    <button class="ver-mas">Ver más</button>
+  </div>
+</div>
