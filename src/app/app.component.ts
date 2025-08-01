@@ -10,6 +10,7 @@ import { FooterComponent } from "./component/footer/footer.component";
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
+  
 })
 export class AppComponent {
   title = 'tallerWeb';

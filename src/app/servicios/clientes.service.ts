@@ -31,6 +31,11 @@ eliminarCliente(id: string): Observable<any> {
   return this.http.delete(`${this.API_CLIENTES}/clientes/${id}.json`);
 }
 
+editarCliente(id:string, cliente:any): Observable<any>{
+    return this.http.put(`${this.API_CLIENTES}/clientes/${id}.json`, cliente);
+
+}
+
 
 
 }

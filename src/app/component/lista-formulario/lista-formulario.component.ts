@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientesService } from '../../servicios/clientes.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-lista-formulario',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './lista-formulario.component.html',
   styleUrl: './lista-formulario.component.css'
 })

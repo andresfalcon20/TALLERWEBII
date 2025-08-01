@@ -5,6 +5,7 @@ import { ProductosComponent } from './component/productos/productos.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.component';
 import { ListaFormularioComponent } from './component/lista-formulario/lista-formulario.component';
+import { EditarFormularioComponent } from './editar-formulario/editar-formulario.component';
 
 export const routes: Routes = [
       { path: 'home', component: HomeComponent },
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: 'contacto', component: ContactoComponent },
       { path: 'sobreNosotros', component: SobreNosotrosComponent },
       { path: 'lista-formulario', component: ListaFormularioComponent },
+{ path: 'clientes/:id', component: EditarFormularioComponent },
   { path: '**', redirectTo: 'home' },
 
 

@@ -1,0 +1,27 @@
+<section class="min-h-screen flex items-center justify-center px-4">
+  <form (ngSubmit)="editar(formulario)" #formulario="ngForm" class="neon-form p-8 rounded-lg w-full max-w-xl mx-auto">
+    <h2 class="text-3xl font-bold text-cyan-400 mb-6 text-center">Editar Cliente</h2>
+
+    <div class="mb-4">
+      <label class="block text-white mb-2">Nombre:</label>
+      <input [(ngModel)]="cliente.nombre" name="nombre" class="neon-input w-full px-4 py-2 rounded" required />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-white mb-2">Correo:</label>
+      <input [(ngModel)]="cliente.correo" name="correo" type="email" class="neon-input w-full px-4 py-2 rounded" required />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-white mb-2">Teléfono:</label>
+      <input [(ngModel)]="cliente.telefono" name="telefono" class="neon-input w-full px-4 py-2 rounded" />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-white mb-2">Dirección:</label>
+      <input [(ngModel)]="cliente.direccion" name="direccion" class="neon-input w-full px-4 py-2 rounded" />
+    </div>
+
+    <button type="submit" class="tech-btn w-full py-2 mt-6 font-bold">Guardar Cambios</button>
+  </form>
+</section>
