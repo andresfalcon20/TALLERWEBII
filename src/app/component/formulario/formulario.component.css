@@ -1,79 +1,79 @@
-@keyframes neonGlow {
-  0%, 100% {
-    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  @keyframes neonGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+    50% {
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    }
   }
-  50% {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  }
-}
 
-@keyframes neonBorder {
-  0% {
-    border-color: #0ff;
+  @keyframes neonBorder {
+    0% {
+      border-color: #0ff;
+      box-shadow: 0 0 10px #0ff;
+    }
+    50% {
+      border-color: #f0f;
+      box-shadow: 0 0 20px #f0f;
+    }
+    100% {
+      border-color: #0ff;
+      box-shadow: 0 0 10px #0ff;
+    }
+  }
+
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 5px #0ff;
+    }
+    50% {
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+  }
+
+
+  .tech-btn {
+    background: transparent;
+    color: #0ff;
+    border: 2px solid #0ff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 0 10px #0ff;
   }
-  50% {
-    border-color: #f0f;
-    box-shadow: 0 0 20px #f0f;
+
+  .tech-btn:hover {
+    animation: neonGlow 1.5s infinite;
+    background: rgba(0, 255, 255, 0.1);
   }
-  100% {
-    border-color: #0ff;
+
+
+  body {
+    background-color: #ffffff;
+    color: #000;
+  }
+
+  .neon-form {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff;
+    animation: neonBorder 2s infinite;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+  }
+
+  .neon-input {
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    outline: none;
     box-shadow: 0 0 10px #0ff;
   }
-}
 
-@keyframes textGlow {
-  0%, 100% {
-    text-shadow: 0 0 5px #0ff;
+  .neon-input::placeholder {
+    color: #ccc;
   }
-  50% {
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+
+  h2, label {
+    color: #0ff;
   }
-}
-
-
-.tech-btn {
-  background: transparent;
-  color: #0ff;
-  border: 2px solid #0ff;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 10px #0ff;
-}
-
-.tech-btn:hover {
-  animation: neonGlow 1.5s infinite;
-  background: rgba(0, 255, 255, 0.1);
-}
-
-
-body {
-  background-color: #ffffff;
-  color: #000;
-}
-
-.neon-form {
-  background-color: rgba(0, 0, 0, 0.85);
-  border: 2px solid #0ff;
-  box-shadow: 0 0 20px #0ff;
-  animation: neonBorder 2s infinite;
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-}
-
-.neon-input {
-  background: transparent;
-  border: 2px solid #0ff;
-  color: #0ff;
-  outline: none;
-  box-shadow: 0 0 10px #0ff;
-}
-
-.neon-input::placeholder {
-  color: #ccc;
-}
-
-h2, label {
-  color: #0ff;
-}

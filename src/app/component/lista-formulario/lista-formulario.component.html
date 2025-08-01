@@ -1,19 +1,47 @@
 <div class="max-w-6xl mx-auto mt-10 text-white">
-  <h2 class="text-2xl font-bold mb-6 text-center text-black">Lista de Clientes</h2>
+  <div class="logo flex justify-center text-center mt-6">
+    <span class="text-3xl font-bold">
+      <i class="fas fa-microchip mr-1"></i>EDITA O ELIMINA TU REGISTRO
+    </span>
+  </div>
 
-  <div *ngFor="let cliente of clientes" class="card">
-    <p class="heading">Cliente registrado</p>
-    <p><strong>Nombre:</strong> {{cliente.nombre}}</p>
-    <p><strong>Correo:</strong> {{cliente.correo}}</p>
-    <p><strong>Teléfono:</strong> {{cliente.telefono}}</p>
-    <p><strong>Dirección:</strong> {{cliente.direccion}}</p>
+  <br><br>
 
-    <div class="mt-2 flex gap-2">
-      <button class="bg-cyan-500 text-white px-3 py-1 rounded hover:bg-cyan-400">Editar</button>
-      <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-500" (click)="eliminar(cliente.id)">
-        Eliminar
-      </button>
+  <div class="flex flex-wrap justify-center gap-6">
+    <div *ngFor="let cliente of clientes" class="group relative [perspective:1000px] w-[270px] h-[300px]">
+      <div class="card absolute w-full h-full duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+
+        <div class="neon-border absolute w-full h-full rounded-xl p-6 [backface-visibility:hidden] bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl text-white flex flex-col justify-end items-center transition-all duration-300 ease-in-out hover:shadow-2xl text-center">
+          
+          <div class="mb-3 border-b border-gray-700 pb-2 w-full">
+            <p class="text-lg font-semibold">Nombre: <span class="font-normal">{{ cliente.nombre }}</span></p>
+          </div>
+
+          <div class="mb-3 border-b border-gray-700 pb-2 w-full">
+            <p class="text-lg font-semibold">Correo: <span class="font-normal">{{ cliente.correo }}</span></p>
+          </div>
+
+          <div class="mb-3 border-b border-gray-700 pb-2 w-full">
+            <p class="text-lg font-semibold">Telefono: <span class="font-normal">{{ cliente.telefono }}</span></p>
+          </div>
+
+            <p class="text-lg font-semibold">Direccion: <span class="font-normal">{{ cliente.direccion }}</span></p>
+
+          <p class="mt-auto text-xs text-pink-400 italic">Pasa el mouse para más opciones</p>
+        </div>
+
+        <div class="neon-border  w-full h-full rounded-xl p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden] bg-white from-gray-900 to-gray-800 flex flex-col justify-center items-center gap-4 shadow-xl text-center">
+          <button class="bg-cyan-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-cyan-400 transition">
+            Editar
+          </button>
+          <button class="bg-red-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-red-500 transition" (click)="eliminar(cliente.id)">
+            Eliminar
+          </button>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
+
 <br><br><br>
