@@ -1,24 +1,41 @@
-<section class="min-h-screen flex items-center justify-center  pt-24">
-  <form class="neon-form bg-opacity-10 p-8 rounded-lg max-w-md w-full">
-    <h2 class="text-3xl font-bold text-center text-cyan-400 mb-6 animate-pulse">Contáctanos</h2>
+<br><section class="min-h-screen flex items-center justify-center px-4">
+  <form (ngSubmit)="agregarCliente(formulario)"  #formulario="ngForm"  class="neon-form p-8 rounded-lg w-full max-w-xl mx-auto">
+    <h2 class="text-3xl font-bold text-cyan-400 mb-6 animate-pulse text-center">
+      ¡Suscríbete para ganar un artículo tecnológico GRATIS!
+    </h2>
 
-    <div class="mb-4">
-      <label class="block text-white font-semibold mb-2">Nombre</label>
-      <input type="text" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu nombre">
+    <img src="https://cdn.pixabay.com/animation/2022/11/30/19/48/19-48-34-65_512.gif"
+     alt="Animación tecnológica"
+     class="mx-auto mb-6 w-32 h-32" />
+     
+    <div class="mb-4 w-[80%] mx-auto">
+      <label class="block text-white font-semibold mb-2">Nombre:</label>
+      <input  [(ngModel)]="nombre"  name="nombre"  type="text" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu nombre">
     </div>
 
-    <div class="mb-4">
-      <label class="block text-white font-semibold mb-2">Correo electrónico</label>
-      <input type="email" class="neon-input w-full px-4 py-2 rounded" placeholder="tu@correo.com">
+    <div class="mb-4 w-[80%] mx-auto">
+      <label class="block text-white font-semibold mb-2">Correo electrónico:</label>
+      <input [(ngModel)]="correo" name="correo" type="email" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu correo electronico">
     </div>
 
-    <div class="mb-4">
-      <label class="block text-white font-semibold mb-2">Mensaje</label>
-      <textarea class="neon-input w-full px-4 py-2 rounded h-24" placeholder="Escribe tu mensaje..."></textarea>
+    <div class="mb-4 w-[80%] mx-auto">
+      <label class="block text-white font-semibold mb-2">Teléfono:</label>
+      <input [(ngModel)]="telefono" name="telefono" type="tel" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu numero de telefono">
     </div>
 
-    <button type="submit" class="tech-btn w-full py-2 mt-4 font-bold">
+    <div class="mb-4 w-[80%] mx-auto">
+      <label class="block text-white font-semibold mb-2">Dirección:</label>
+<input [(ngModel)]="direccion"  name="direccion" type="tel" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu direccion">
+    </div>
+
+    <button type="submit" class="tech-btn w-[80%] mx-auto block py-2 mt-6 font-bold">
       <i class="fas fa-paper-plane mr-2"></i>Enviar
     </button>
+
+<p class="text-white text-center mt-4">
+  ¿Deseas <a routerLink="/lista-formulario" class="text-cyan-400 underline hover:text-cyan-300">editar o eliminar</a> tu registro?
+</p>
+
+
   </form>
-</section>
+</section><br><br>

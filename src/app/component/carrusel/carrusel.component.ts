@@ -30,7 +30,7 @@ export class CarruselComponent implements AfterViewInit {
     {
       imagen: 'assets/img/tele4.jpg ',
       titulo: 'Televisores',
-    descripcion: 'OLED 4K para una imagen envolvente.'
+    descripcion: 'OLED 4K en imagen envolvente.'
       }
   ];
 
