@@ -24,7 +24,7 @@ login() {
   this.authServicio.login(this.usuario, this.password).subscribe({
     next: (esValido) => {
       if (esValido) {
-        const redireccion = localStorage.getItem('redirectUrl') || '/crear-curso';
+        const redireccion = localStorage.getItem('redirectUrl') || '/home';
         localStorage.removeItem('redirectUrl');
         this.router.navigateByUrl(redireccion);
       } else {

@@ -30,12 +30,18 @@
 </ng-container>
 
 <ng-container *ngIf="authServicio.sesionIniciada()">
+  <a routerLink="/carrito" class="tech-btn px-2 py-2 rounded font-semibold flex items-center">
+    <i class="fas fa-shopping-cart mr-2"></i>Carrito
+  </a>
+
   <button (click)="cerrarSesion()" class="tech-btn px-2 py-2 rounded font-semibold">
     <i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión
   </button>
 </ng-container>
 
+
       </div>
+      
     </div>
   </div>
 </nav>

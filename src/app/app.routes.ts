@@ -9,6 +9,7 @@ import { EditarFormularioComponent } from './editar-formulario/editar-formulario
 import { LoginComponent } from './component/login/login.component';
 import { RegistroUsuarioComponent } from './component/registro-usuario/registro-usuario.component';
 import { authGuard } from './guards/auth.guard';
+import { CarritoComponent } from './component/carrito/carrito.component';
 
 export const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'sobreNosotros', component: SobreNosotrosComponent, canActivate: [authGuard] },
   { path: 'lista-formulario', component: ListaFormularioComponent, canActivate: [authGuard] },
   { path: 'clientes/:id', component: EditarFormularioComponent, canActivate: [authGuard] },
+{ path: 'carrito', component: CarritoComponent },
 
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroUsuarioComponent },
