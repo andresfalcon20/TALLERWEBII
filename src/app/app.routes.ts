@@ -11,17 +11,20 @@ import { RegistroUsuarioComponent } from './component/registro-usuario/registro-
 import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-      { path: 'home', component: HomeComponent },
-      { path: 'formulario', component: FormularioComponent },
-      { path: 'productos', component: ProductosComponent, canActivate: [authGuard] },
-    { path: 'contacto', component: ContactoComponent },
-      { path: 'sobreNosotros', component: SobreNosotrosComponent },
-      { path: 'lista-formulario', component: ListaFormularioComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'registro', component: RegistroUsuarioComponent },
-{ path: 'clientes/:id', component: EditarFormularioComponent },
-  { path: '**', redirectTo: 'home' },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
 
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'formulario', component: FormularioComponent, canActivate: [authGuard] },
+  { path: 'productos', component: ProductosComponent, canActivate: [authGuard] },
+  { path: 'contacto', component: ContactoComponent, canActivate: [authGuard] },
+  { path: 'sobreNosotros', component: SobreNosotrosComponent, canActivate: [authGuard] },
+  { path: 'lista-formulario', component: ListaFormularioComponent, canActivate: [authGuard] },
+  { path: 'clientes/:id', component: EditarFormularioComponent, canActivate: [authGuard] },
+
+  { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegistroUsuarioComponent },
+
+  { path: '**', redirectTo: 'login' }
 
 
 
