@@ -10,14 +10,24 @@
       </div>
 
       <div class="flex items-center space-x-8">
-        <a routerLink="/home" class="nav-link px-3 py-2 font-bold text-xl">Inicio</a>
-        <a routerLink="/productos" class="nav-link px-3 py-2 font-bold text-xl">Productos</a>
-        <a routerLink="/sobreNosotros" class="nav-link px-3 py-2 font-bold text-xl">Nosotros</a>
-        <a routerLink="/contacto" class="nav-link px-3 py-2 font-bold text-xl">Contacto</a>
-        <button routerLink="/formulario" class="tech-btn px-6 py-2 rounded font-semibold">
-  <i class="fas fa-envelope-open-text mr-2"></i>Suscripción
-</button>
+        <a routerLink="/home" class="nav-link px-2 py-1 font-bold text-xl">Inicio</a>
+        <a routerLink="/productos" class="nav-link px-1 py-2 font-bold text-xl">Productos</a>
+        <a routerLink="/sobreNosotros" class="nav-link px-1 py-2 font-bold text-xl">Nosotros</a>
+        <a routerLink="/contacto" class="nav-link px-1 py-2 font-bold text-xl">Contacto</a>
 
+        <button routerLink="/formulario" class="tech-btn px-2 py-2 rounded font-semibold">
+          <i class="fas fa-envelope-open-text mr-2"></i>Suscripción
+        </button>
+
+        <button routerLink="/login" class="tech-btn px-1 py-2 rounded font-semibold">
+          <i class="fas fa-user mr-2"></i>Login
+        </button>
+        <button routerLink="/registro" class="tech-btn px-1 py-2 rounded font-semibold">
+          <i class="fas fa-user-plus mr-2"></i>Registro
+        </button>
+         <button (click)="cerrarSesion()" class="tech-btn px-2 py-2 rounded font-semibold">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
       </div>
     </div>
   </div>

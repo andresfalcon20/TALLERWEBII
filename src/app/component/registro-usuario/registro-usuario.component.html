@@ -1,0 +1,54 @@
+<div class="center-wrapper">
+  <div class="container">
+    <div class="heading">Registro</div>
+    <form (ngSubmit)="registrarUsuario()" #form="ngForm" class="form">
+      
+      <input
+        [(ngModel)]="nombre"
+        name="nombre"
+        placeholder="Nombre De Usuario"
+        id="usuario"
+        type="text"
+        class="input"
+        required
+        minlength="3"
+        maxlength="50"
+      />
+      <div *ngIf="form.submitted || form.controls['nombre']?.touched" class="error">
+        <small *ngIf="form.controls['nombre']?.hasError('required')">El nombre es obligatorio.</small>
+        <small *ngIf="form.controls['nombre']?.hasError('minlength')">El nombre debe tener al menos 3 caracteres.</small>
+      </div>
+
+      <input
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Correo Electrónico"
+        id="email"
+        type="email"
+        class="input"
+        required
+        email
+      />
+      <div *ngIf="form.submitted || form.controls['email']?.touched" class="error">
+        <small *ngIf="form.controls['email']?.hasError('required')">El correo electrónico es obligatorio.</small>
+      </div>
+
+      <input
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        id="password"
+        type="password"
+        class="input"
+        required
+        minlength="6"
+      />
+      <div *ngIf="form.submitted || form.controls['password']?.touched" class="error">
+        <small *ngIf="form.controls['password']?.hasError('required')">La contraseña es obligatoria.</small>
+        <small *ngIf="form.controls['password']?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</small>
+      </div>
+
+      <input value="Registrate" type="submit" class="login-button" />
+    </form>
+  </div>
+</div>

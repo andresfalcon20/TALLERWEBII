@@ -1,0 +1,42 @@
+<div class="center-wrapper">
+  <div class="container">
+    <div class="heading">Inicia Sesion</div>
+    <form class="form" (ngSubmit)="login()" #form="ngForm">
+
+      <input
+        [(ngModel)]="usuario"
+        placeholder="Ingrese su nombre De Usuario"
+        id="usuario"
+        name="usuario"
+        type="text"
+        class="input"
+        required
+        minlength="3"
+      />
+      <div *ngIf="form.submitted || form.controls['usuario']?.touched" class="error">
+        <small *ngIf="form.controls['usuario']?.hasError('required')">El nombre de usuario es obligatorio.</small>
+        <small *ngIf="form.controls['usuario']?.hasError('minlength')">El nombre de usuario debe tener al menos 3 caracteres.</small>
+      </div>
+
+      <input
+        [(ngModel)]="password"
+        placeholder="Ingrese su Contraseña"
+        id="password"
+        name="password"
+        type="password"
+        class="input"
+        required
+        minlength="6"
+      />
+      <div *ngIf="form.submitted || form.controls['password']?.touched" class="error">
+        <small *ngIf="form.controls['password']?.hasError('required')">La contraseña es obligatoria.</small>
+        <small *ngIf="form.controls['password']?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</small>
+      </div>
+
+      <input value="Inicia Sesion" type="submit" class="login-button" />
+    </form>
+
+    <div *ngIf="error" style="color: red;">{{error}}</div>
+
+  </div>
+</div>
