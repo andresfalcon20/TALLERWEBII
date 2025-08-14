@@ -2,18 +2,20 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { EdadPipe } from '../../pipes/edad.pipe';
 
 @Component({
   selector: 'app-registro-usuario',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, EdadPipe],
   templateUrl: './registro-usuario.component.html',
   styleUrl: './registro-usuario.component.css'
 })
 export class RegistroUsuarioComponent {
   nombre: string = '';
   email: string = '';
-  password: string = '';
+fechaNacimiento: string = '';  
+password: string = '';
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +23,8 @@ export class RegistroUsuarioComponent {
     const nuevoUsuario = {
       nombre: this.nombre,
       email: this.email,
+          fechaNacimiento: this.fechaNacimiento,
+
       password: this.password
     };
 

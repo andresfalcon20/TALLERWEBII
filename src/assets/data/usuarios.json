@@ -29,6 +29,13 @@
       "nombre": "sasa",
       "email": "sa@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": "1484",
+      "nombre": "Andrxs",
+      "email": "andresfalcon.18@hotmail.com",
+      "fechaNacimiento": "2004-03-07",
+      "password": "12345"
     }
   ]
 }
