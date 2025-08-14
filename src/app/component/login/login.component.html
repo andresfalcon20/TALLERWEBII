@@ -26,11 +26,11 @@
         type="password"
         class="input"
         required
-        minlength="6"
+        minlength="5"
       />
       <div *ngIf="form.submitted || form.controls['password']?.touched" class="error">
         <small *ngIf="form.controls['password']?.hasError('required')">La contraseña es obligatoria.</small>
-        <small *ngIf="form.controls['password']?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</small>
+        <small *ngIf="form.controls['password']?.hasError('minlength')">La contraseña debe tener al menos 5 caracteres.</small>
       </div>
 
       
