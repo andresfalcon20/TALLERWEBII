@@ -1,0 +1,99 @@
+:host {
+  --bg-dark: #12121a;
+  --text-light: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-blue: #007bff;
+  --border-color: #2a2a3e;
+  --button-glow: 0 0 5px var(--accent-blue);
+}
+
+.carrito {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Arial', sans-serif;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+
+.carrito > ng-template p {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-secondary);
+  font-weight: normal;
+  border-top: none;
+  padding-top: 0;
+}
+
+button {
+  background-color: transparent;
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--button-glow);
+}
+
+button:hover {
+  background-color: var(--accent-blue);
+  color: var(--bg-dark);
+  box-shadow: 0 0 10px var(--accent-blue);
+}
+
+li button {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.carrito > button {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 0;
+  border: 2px solid var(--accent-blue);
+  box-shadow: var(--button-glow);
+}
