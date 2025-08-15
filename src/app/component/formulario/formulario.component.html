@@ -1,5 +1,5 @@
-<br><section class="min-h-screen flex items-center justify-center px-4">
-  <form (ngSubmit)="agregarCliente(formulario)"  #formulario="ngForm"  class="neon-form p-8 rounded-lg w-full max-w-xl mx-auto">
+<section class="min-h-screen flex items-center justify-center px-4">
+  <form (ngSubmit)="agregarCliente(formulario)" #formulario="ngForm" class="neon-form p-8 rounded-lg w-full max-w-xl mx-auto">
     <h2 class="text-3xl font-bold text-cyan-400 mb-6 animate-pulse text-center">
       ¡Suscríbete para ganar un artículo tecnológico GRATIS!
     </h2>
@@ -7,35 +7,50 @@
     <img src="https://cdn.pixabay.com/animation/2022/11/30/19/48/19-48-34-65_512.gif"
      alt="Animación tecnológica"
      class="mx-auto mb-6 w-32 h-32" />
-     
-    <div class="mb-4 w-[80%] mx-auto">
-      <label class="block text-white font-semibold mb-2">Nombre:</label>
-      <input  [(ngModel)]="nombre"  name="nombre"  type="text" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu nombre">
-    </div>
+
+  <div class="mb-4 w-[80%] mx-auto">
+  <label class="block text-white font-semibold mb-2">Nombre:</label>
+  <input [(ngModel)]="nombre" name="nombre" required minlength="3" #nombreRef="ngModel" type="text" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu nombre">
+
+  @if(nombreRef.invalid && nombreRef.touched) {
+    <span class="text-red-500 text-sm">El nombre es obligatorio y debe tener al menos 3 caracteres</span>
+  }
+
+  @if(nombre.trim()) {
+    <p class="text-cyan-300 text-sm mt-2">Recomendacion: {{ nombre | mayuscula }}</p>
+  }
+</div>
 
     <div class="mb-4 w-[80%] mx-auto">
       <label class="block text-white font-semibold mb-2">Correo electrónico:</label>
-      <input [(ngModel)]="correo" name="correo" type="email" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu correo electronico">
+      <input [(ngModel)]="correo" name="correo" required email #correoRef="ngModel" type="email" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu correo electrónico">
+      @if(correoRef.invalid && correoRef.touched) {
+        <span class="text-red-500 text-sm">Ingresa un correo válido</span>
+      }
     </div>
 
     <div class="mb-4 w-[80%] mx-auto">
       <label class="block text-white font-semibold mb-2">Teléfono:</label>
-      <input [(ngModel)]="telefono" name="telefono" type="tel" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu numero de telefono">
+      <input [(ngModel)]="telefono" name="telefono" required pattern="^[0-9]{7,15}$" #telefonoRef="ngModel" type="tel" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu número de teléfono">
+      @if(telefonoRef.invalid && telefonoRef.touched) {
+        <span class="text-red-500 text-sm">Ingresa un número válido (7 a 15 dígitos)</span>
+      }
     </div>
 
     <div class="mb-4 w-[80%] mx-auto">
       <label class="block text-white font-semibold mb-2">Dirección:</label>
-<input [(ngModel)]="direccion"  name="direccion" type="tel" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu direccion">
+      <input [(ngModel)]="direccion" name="direccion" required minlength="5" #direccionRef="ngModel" type="text" class="neon-input w-full px-4 py-2 rounded" placeholder="Ingresa tu dirección">
+      @if(direccionRef.invalid && direccionRef.touched) {
+        <span class="text-red-500 text-sm">La dirección es obligatoria y debe tener al menos 5 caracteres</span>
+      }
     </div>
 
-    <button type="submit" class="tech-btn w-[80%] mx-auto block py-2 mt-6 font-bold">
+    <button type="submit" [disabled]="camposSinLlenar()" class="tech-btn w-[80%] mx-auto block py-2 mt-6 font-bold">
       <i class="fas fa-paper-plane mr-2"></i>Enviar
     </button>
 
-<p class="text-white text-center mt-4">
-  ¿Deseas <a routerLink="/lista-formulario" class="text-cyan-400 underline hover:text-cyan-300">editar o eliminar</a> tu registro?
-</p>
-
-
+    <p class="text-white text-center mt-4">
+      ¿Deseas <a routerLink="/lista-formulario" class="text-cyan-400 underline hover:text-cyan-300">editar o eliminar</a> tu registro?
+    </p>
   </form>
-</section><br><br>
+</section>

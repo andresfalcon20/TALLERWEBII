@@ -1,98 +1,98 @@
-.center-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;  
-background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-image: url('https://i.pinimg.com/originals/f2/8b/62/f28b62e3c73e0991d51e6c0dcb412360.gif');
-}
-
-.container {
-  background: rgba(0, 20, 30, 0.9); 
-  padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; 
-  width: 100%;
-  max-width: 400px; 
-  text-align: center;
-  color: #fff;
-}
-
-.heading {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #0ff;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); 
-  animation: textGlow 3s infinite;
-}
-
-@keyframes textGlow {
-  0%, 100% {
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  .center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+  background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-image: url('https://i.pinimg.com/originals/f2/8b/62/f28b62e3c73e0991d51e6c0dcb412360.gif');
   }
-  50% {
-    text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+
+  .container {
+    background: rgba(0, 20, 30, 0.9); 
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; 
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+    color: #fff;
   }
-}
 
-.input {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  border: 2px solid #0ff;
-  background-color: transparent;
-  color: #fff;
-  border-radius: 10px;
-  font-size: 1rem;
-  text-align: center;
-  outline: none;
-  box-shadow: 0 0 5px #0ff;
-  transition: all 0.3s ease;
-}
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); 
+    animation: textGlow 3s infinite;
+  }
 
-.input:focus {
-  border-color: #00e6e6; 
-  box-shadow: 0 0 10px #00e6e6;
-}
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+    }
+    50% {
+      text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    }
+  }
 
-.login-button {
-  width: 100%;
-  padding: 15px;
-  background-color: transparent;
-  border: 2px solid #0ff;
-  color: #0ff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-  box-shadow: 0 0 10px #0ff;
-}
+  .input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #0ff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 5px #0ff;
+    transition: all 0.3s ease;
+  }
 
-.login-button:hover {
-  background-color: #0ff;
-  color: #1a1a1a;
-  box-shadow: 0 0 20px #0ff;
-}
+  .input:focus {
+    border-color: #00e6e6; 
+    box-shadow: 0 0 10px #00e6e6;
+  }
 
-.login-button:focus {
-  outline: none;
-}
+  .login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 0 10px #0ff;
+  }
 
-.error {
-  color: red; 
-  font-size: 0.9rem;  
-  margin-top: 5px; 
-}
+  .login-button:hover {
+    background-color: #0ff;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px #0ff;
+  }
 
-input.ng-invalid.ng-touched {
-  border-color: red;  
-}
+  .login-button:focus {
+    outline: none;
+  }
 
-.input {
-  margin-bottom: 10px;  
-}
+  .error {
+    color: red; 
+    font-size: 0.9rem;  
+    margin-top: 5px; 
+  }
+
+  input.ng-invalid.ng-touched {
+    border-color: red;  
+  }
+
+  .input {
+    margin-bottom: 10px;  
+  }
