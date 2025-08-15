@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ClientesService } from '../../servicios/clientes.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { CapitalizarPipe } from '../../pipes/capitalizar.pipe';
+import { OcultarCorreoPipe } from '../../pipes/ocultar-correo.pipe';
+import { OcultarNumeroPipe } from '../../pipes/ocultar-numero.pipe';
 
 @Component({
   selector: 'app-lista-formulario',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, CapitalizarPipe, OcultarCorreoPipe,OcultarNumeroPipe],
   templateUrl: './lista-formulario.component.html',
   styleUrl: './lista-formulario.component.css'
 })

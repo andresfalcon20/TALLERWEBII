@@ -14,19 +14,15 @@
         <div class="neon-border absolute w-full h-full rounded-xl p-6 [backface-visibility:hidden] bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl text-white flex flex-col justify-end items-center transition-all duration-300 ease-in-out hover:shadow-2xl text-center">
           
           <div class="mb-3 border-b border-gray-700 pb-2 w-full">
-            <p class="text-lg font-semibold">Nombre: <span class="font-normal">{{ cliente.nombre }}</span></p>
-          </div>
+            <p class="text-lg font-semibold">Nombre: <span class="font-normal">{{ cliente.nombre | capitalizar }}</span></p>          </div>
 
           <div class="mb-3 border-b border-gray-700 pb-2 w-full">
-            <p class="text-lg font-semibold">Correo: <span class="font-normal">{{ cliente.correo }}</span></p>
-          </div>
+            <p class="text-lg font-semibold">Correo: <span class="font-normal">{{ cliente.correo | ocultarCorreo }}</span></p>          </div>
 
           <div class="mb-3 border-b border-gray-700 pb-2 w-full">
-            <p class="text-lg font-semibold">Telefono: <span class="font-normal">{{ cliente.telefono }}</span></p>
-          </div>
+            <p class="text-lg font-semibold">Teléfono: <span class="font-normal">{{ cliente.telefono | ocultarNumero }}</span></p>          </div>
 
-            <p class="text-lg font-semibold">Direccion: <span class="font-normal">{{ cliente.direccion }}</span></p>
-
+          <p class="text-lg font-semibold">Dirección: <span class="font-normal">{{ cliente.direccion | capitalizar }}</span></p>
           <p class="mt-auto text-xs text-pink-400 italic">Pasa el mouse para más opciones</p>
         </div>
 

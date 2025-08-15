@@ -10,12 +10,13 @@ import { LoginComponent } from './component/login/login.component';
 import { RegistroUsuarioComponent } from './component/registro-usuario/registro-usuario.component';
 import { authGuard } from './guards/auth.guard';
 import { CarritoComponent } from './component/carrito/carrito.component';
+import { canauthGuard } from './guards/canauth.guard';
 
 export const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
-  { path: 'formulario', component: FormularioComponent, canActivate: [authGuard] },
+  { path: 'formulario', component: FormularioComponent, canActivate: [authGuard], canDeactivate: [canauthGuard] },
   { path: 'productos', component: ProductosComponent, canActivate: [authGuard] },
   { path: 'contacto', component: ContactoComponent, canActivate: [authGuard] },
   { path: 'sobreNosotros', component: SobreNosotrosComponent, canActivate: [authGuard] },
@@ -30,6 +31,6 @@ export const routes: Routes = [
 
 
 
-  
+
 
 ];
